@@ -9,5 +9,5 @@ To enable PPP, there must be some new mechanism beyond not only current royalty 
 
 PPP is the cornerstone of every future use cases in Musicoin system, so we will explain it more in detain in https://github.com/Musicoin/musicoin/wiki. 
 
-*** License ***
+## License
 Creative Commons 
