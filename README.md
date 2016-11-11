@@ -1,5 +1,4 @@
 # What's Musicoin
-> provide general and indepth documents based on wiki
 
 Musicoin is a blockchain-based system for music transactions. Also it's a digital currency to incentivize musicians and listeners to transact directly without royalty intermediaries.
 
