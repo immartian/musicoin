@@ -1,0 +1,48 @@
+[package]
+description = "Parity Dapps crate"
+name = "ethcore-dapps"
+version = "1.5.0"
+license = "GPL-3.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+build = "build.rs"
+
+[lib]
+
+[dependencies]
+rand = "0.3.14"
+log = "0.3"
+env_logger = "0.3"
+jsonrpc-core = { git = "https://github.com/ethcore/jsonrpc.git" }
+jsonrpc-http-server = { git = "https://github.com/ethcore/jsonrpc.git" }
+hyper = { default-features = false, git = "https://github.com/ethcore/hyper" }
+unicase = "1.3"
+url = "1.0"
+rustc-serialize = "0.3"
+serde = "0.8"
+serde_json = "0.8"
+linked-hash-map = "0.3"
+parity-dapps-glue = "1.4"
+mime = "0.2"
+mime_guess = "1.6.1"
+time = "0.1.35"
+serde_macros = { version = "0.8", optional = true }
+zip = { version = "0.1", default-features = false }
+ethcore-devtools = { path = "../devtools" }
+ethcore-rpc = { path = "../rpc" }
+ethcore-util = { path = "../util" }
+ethcore-hash-fetch = { path = "../ethcore/hash-fetch" }
+fetch = { path = "../util/fetch" }
+parity-ui = { path = "./ui" }
+
+clippy = { version = "0.0.103", optional = true}
+
+[build-dependencies]
+serde_codegen = { version = "0.8", optional = true }
+
+[features]
+default = ["serde_codegen"]
+nightly = ["serde_macros"]
+dev = ["clippy", "ethcore-rpc/dev", "ethcore-util/dev"]
+
+ui = ["parity-ui/no-precompiled-js"]
+ui-precompiled = ["parity-ui/use-precompiled-js"]

@@ -1,0 +1,62 @@
+[package]
+description = "Ethcore library"
+homepage = "http://parity.io"
+license = "GPL-3.0"
+name = "ethcore"
+version = "1.5.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+build = "build.rs"
+
+[build-dependencies]
+"ethcore-ipc-codegen" = { path = "../ipc/codegen" }
+
+[dependencies]
+log = "0.3"
+env_logger = "0.3"
+rustc-serialize = "0.3"
+heapsize = "0.3"
+rust-crypto = "0.2.34"
+num_cpus = "0.2"
+crossbeam = "0.2.9"
+lazy_static = "0.2"
+bloomchain = "0.1"
+rayon = "0.4.2"
+semver = "0.2"
+bit-set = "0.4"
+time = "0.1"
+rand = "0.3"
+byteorder = "0.5"
+transient-hashmap = "0.1"
+linked-hash-map = "0.3.0"
+evmjit = { path = "../evmjit", optional = true }
+clippy = { version = "0.0.103", optional = true}
+ethash = { path = "../ethash" }
+ethcore-util = { path = "../util" }
+ethcore-io = { path = "../util/io" }
+ethcore-devtools = { path = "../devtools" }
+ethjson = { path = "../json" }
+ethcore-ipc = { path = "../ipc/rpc" }
+ethstore = { path = "../ethstore" }
+ethkey = { path = "../ethkey" }
+ethcore-ipc-nano = { path = "../ipc/nano" }
+rlp = { path = "../util/rlp" }
+lru-cache = "0.1.0"
+ethcore-bloom-journal = { path = "../util/bloom" }
+
+[dependencies.hyper]
+git = "https://github.com/ethcore/hyper"
+default-features = false
+
+[features]
+jit = ["evmjit"]
+evm-debug = ["slow-blocks"]
+evm-debug-tests = ["evm-debug"]
+slow-blocks = [] # Use SLOW_TX_DURATION="50" (compile time!) to track transactions over 50ms
+json-tests = []
+test-heavy = []
+dev = ["clippy"]
+default = []
+benches = []
+ipc = []
+ethkey-cli = ["ethkey/cli"]
+ethstore-cli = ["ethstore/cli"]
