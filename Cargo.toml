@@ -1,9 +1,9 @@
 [package]
-description = "Ethcore client."
-name = "parity"
+description = "Musicoin command line client."
+name = "musicoin"
 version = "1.5.0"
 license = "GPL-3.0"
-authors = ["Parity Technologies <admin@parity.io>"]
+authors = ["Musicoin Foundation <musicoin@musicoin.org>"]
 build = "build.rs"
 
 [build-dependencies]
@@ -84,7 +84,7 @@ slow-blocks = ["ethcore/slow-blocks"]
 
 [[bin]]
 path = "parity/main.rs"
-name = "parity"
+name = "musicoin"
 
 [profile.release]
 debug = false
