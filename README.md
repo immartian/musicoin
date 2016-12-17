@@ -9,7 +9,8 @@ Musicoin is a blockchain platform, also it's a digital currency to incentivize m
 
 # Build Musicoin client from source
 
-```# download Musicoin client code
+```
+# download Musicoin client code
 $ git clone https://github.com/musicoin/musicoin
 $ cd musicoin
 

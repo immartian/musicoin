@@ -1,5 +1,5 @@
 {
-  "name": "GethTranslation",
+  "name": "Musicoin",
   "engine": {
     "Ethash": {
       "params": {
@@ -7,7 +7,7 @@
         "minimumDifficulty": "0x20000",
         "difficultyBoundDivisor": "0x800",
         "durationLimit": "0xd",
-        "blockReward": "0x4563918244F40000",
+        "blockReward": "0x2B5E3AF16B1880000",
         "registrar": "0x81a4b044831c4f12ba601adb9274516939e9b8a2",
         "homesteadTransition": 1000000,
         "eip150Transition": 0,
@@ -39,7 +39,6 @@
     "gasLimit": "0x7a1200"
   },
   "nodes": [
-    "enode://d383ed7364a61b49c8532cd96ed95bfaee49388779f04dd5baaf63769817595c6c2c16324d11598b4e90c1069e467a7aaf44f10ea20ae85da31752de60e0fc47@104.197.75.174:30303"
     ],
 
   "accounts": {
