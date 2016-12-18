@@ -16,6 +16,9 @@ $ cd musicoin
 
 # build in release mode
 $ cargo build --release
+
+$ ./target/release/musicoin --chain mus.json    //other parameters can be kept based on your needs
+
 ```
 
 This will produce an executable in the ./target/release subdirectory.
